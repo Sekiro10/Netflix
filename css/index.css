@@ -1,0 +1,328 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/hero-img.jpg");
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    cursor: pointer;
+    width: 150px;
+}
+
+nav button {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 7px 20px;
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+
+.lang-btn img {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.header-cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 100px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.header-cont h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-cont h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+
+.sign-in {
+    background: #fff;
+    display: flex;
+    margin-top: 30px;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.sign-in input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.sign-in button {
+    background: #db0001;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+.feature-cont {
+    padding: 50px 12%;
+    font-size: 22px;
+
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-con {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-con img {
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+.feature-cont h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordance {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordance li {
+    list-style: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.accordance li label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+}
+
+label::after {
+    content: '+';
+    right: 20px;
+    position: absolute;
+    font-size: 34px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordance .content {
+    background: #303030;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 20px;
+    text-align: left;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordance input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
+
+.accordance input[type="radio"]:checked+label::after {
+    transform: rotate(130deg);
+
+}
+
+.faq .sign-in {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+.faq small {
+    font-size: 15px;
+}
+
+.footer {
+    padding: 50px 15% 10px;
+    border-top: 6px solid #333;
+    color: #777;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer button {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.footer .rights-txt {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (max-width:600px) {
+    .logo {
+        width: 100px;
+    }
+
+    .header-cont {
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+
+    }
+
+    .header-cont h1 {
+        font-size: 30px;
+    }
+
+    .sign-in button {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .text-col,
+    .img-con {
+        flex-basis: 100%;
+    }
+
+    .feature-cont h2 {
+        font-size: 30px;
+    }
+
+    .feature-cont p {
+        font-size: 15px;
+    }
+
+    .row:nth-child(2),
+    .row:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .feature-cont h2 {
+        padding: 10px 0;
+    }
+
+    .faq h2 {
+        font-size: 20px;
+    }
+
+    .accordance .content {
+        font-size: 14px;
+    }
+
+    .accordance li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .label::after {
+        font-size: 22px;
+    }
+}
